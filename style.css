@@ -1,3 +1,13 @@
+@font-face {
+    font-family: techFont;
+    src: url(fonts/TechFont.otf);
+  }
+
+  @font-face{
+    font-family: techText;
+    src: url(fonts/TechText.ttf)
+  }
+
 * { 
     margin: 0;
     padding: 0;
@@ -5,14 +15,18 @@
 }
 
 body {
-    background-color: black
+    background-color: black;
 }
 
 .header {
-    
     background-position: center;
     background-size: cover;
     position: relative;
+    position: fixed;
+    background-color: black;
+    top:0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav {
@@ -27,6 +41,7 @@ nav {
     flex: 1;
     text-align: center;
     overflow: visible; /* Ensure dropdown is visible */
+    
 }
 
 .nav-links ul {
@@ -40,19 +55,22 @@ nav {
     display: inline-block;
     padding: 12px 12px;
     position: relative;
-    border-radius: 3px;
+    border-radius: 10px;
 }
 
 .nav-links ul li a {
     color: pink;
     text-decoration: none;
+    font-family: TechFont;
+    font-weight: 400;
+    font-style: normal;
     font-size: 15px;
     text-align: center;
     padding: 14px 16px;
 }
 
 .nav-links ul li:hover {
-    box-shadow: 0px 2px 8px pink;
+    box-shadow: 0px 0px 5px pink;
 }
 
 .dropdown-content {
@@ -63,7 +81,8 @@ nav {
     background-color: black;
     min-width: 150px;
     z-index: 999; /* Ensure it's on top of other content */
-    box-shadow: 0px 2px 8px pink;
+    box-shadow: 0px 0px 5px pink;
+    border-radius: 10px;
 }
 
 .dropdown-content a {
@@ -75,7 +94,7 @@ nav {
 
 .dropdown-content a:hover {
     background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 2px 8px pink;
+    box-shadow: 0px 0px 5px pink;
 }
 
 .dropdown:hover .dropdown-content {
@@ -112,21 +131,28 @@ nav {
     }
 }
 
-.hero-text{
+.main-content{
+    margin-top: 150px;
+}
+
+.main-hero-text{
     padding-left: 10%;
-    padding-right: 40%;
+    padding-right: 30%;
     color: pink;
 }
 
-.hero-text h1{
+.main-hero-text h1{
     animation: slide-left 1.2s ease-in-out forwards;
-    font-size: 40px;
+    font-size: 60px;
     padding-top: 15px;
+    font-family: techFont;
 }
 
-.hero-text p{
+.main-hero-text p{
     font-size: 18px;
     text-align: left;
+    line-height: 1.5em;
+    font-family: techText;
 }
 
 .project-card{
@@ -140,12 +166,12 @@ nav {
     justify-content: space-between;
     margin-bottom: 2%;
     gap: 1%;
+    flex-wrap: wrap;
 }
 
 .column{
     flex: 1;
     max-width: 48%;
-    border-radius: 8px;
     justify-content: center;
     align-items: center;
 }
@@ -154,7 +180,6 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     border-radius: 8px;
-    background-color: pink;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
@@ -169,6 +194,7 @@ nav {
     object-fit: cover;
     border-radius: 8px;
 }
+
 .project-info{
     position: absolute;
     bottom: -100px; /* Initially hide it off-screen */
@@ -183,6 +209,7 @@ nav {
     opacity: 0;
     font-size: 20px;
 }
+
 .card:hover .project-info {
     bottom: 0; /* Bring it into view */
     opacity: 1; /* Fade it in */
@@ -196,6 +223,8 @@ nav {
 .project-desc p{
     color: pink;
     font-size: 18px;
+    font-family: techText;
+    line-height: 4vh;
 }
 
 button{
@@ -251,40 +280,38 @@ button:hover {
     transform:scale(1.1);
 }
 
-/* ART PROJECTS PAGE */
-
-.art-hero-text{
+/* Other pages' hero*/
+.hero-text{
     padding-left: 10%;
-    padding-right: 40%;
     color: pink;
+    position: fixed;
+    top: 10%;
+    background-color: black;
+    width: 100%;
+    z-index: 999;
 }
 
-.art-hero-text h1{
+.hero-text h1{
     font-size: 40px;
     padding-top: 15px;
+    font-family: techFont;
+    margin-bottom: 10px;
 }
 
-.art-hero-text p{
+.hero-text p{
     font-size: 18px;
     text-align: left;
-}
-
-.art-projects{
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 3%;
 }
 
 .art-card{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    border-radius: 8px;
-    background-color: pink;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     width: 100%;
     height: auto;
+    transition: transform 0.3s ease;
 }
 
 .art-card img{
@@ -293,4 +320,190 @@ button:hover {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+.art-card:hover {
+    opacity: 0.5;
+}
+
+.project-details{
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    color: black;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+    z-index: 1000;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Modal Content (image) */
+.modal-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 700px;
+    margin: auto;
+    background-color:pink;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+
+}
+
+
+.modal-details {
+    margin: 10px auto;
+    color: black;
+    text-align: left;
+    padding: 10px;
+    padding-left: 30px;
+    font-size: 16px;
+    flex-grow: 1;
+    width: 100%; 
+    font-family: techText;
+    line-height: 25px;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.container{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.contact-info{
+    color: pink;
+}
+
+.contact-info h2{
+    padding-top: 5%;
+}
+
+.art-scroll{
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 17%;
+}
+
+#side-nav
+{
+    text-decoration: none;
+    max-width: 20%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 30%;
+    z-index: 999;
+    background-color: black;
+
+}
+
+#side-nav a{
+    text-decoration: none;
+    font-family: techFont;
+    font-size: large;
+    line-height: 3em;
+    color: rgba(255, 192, 203, 0.5); /* Dimmed pink */
+}
+
+#side-nav a:hover {
+    color: pink;
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+#side-nav a.active {
+    color: pink; /* Highlighted pink */
+}
+
+.art-projects{
+    max-width: 80%;
+    margin-left: 20%;
+}
+
+#project-cat{
+    color: pink;
+    font-family: techFont;
+}
+
+.tech-projects{
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-top: 16%;
+}
+.tech-card{    
+    display: flex;
+    flex-direction: column;  /* Allows content to stack vertically */
+    justify-content: space-between;
+    background-color: pink;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 260px;
+}
+
+.tech-project-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tech-description{
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #333;
+    flex-grow: 1;
+}
+
+.github-logo {
+    width: 30px;
+    height: auto;
+}
+
+.tech-bubble {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
