@@ -37,7 +37,7 @@ sideNavLinks.forEach(link => {
         const sectionId = this.getAttribute('href').substring(1); // Get the section id without the '#'
         const section = document.getElementById(sectionId);
 
-        const yOffset = -240; // Adjust this value to set how far above the section you want to scroll
+        const yOffset = -200; // Adjust this value to set how far above the section you want to scroll
         const yPosition = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
         // Scroll to the position with smooth behavior
@@ -68,4 +68,19 @@ window.addEventListener('scroll', function() {
             link.classList.add('active');
         }
     });
+});
+
+let scale = 1;
+
+function zoomPage(factor) {
+    scale *= factor;
+    document.getElementById("container").style.transform = `scale(${scale})`;
+}
+
+// Example to zoom in and out
+document.addEventListener("wheel", (e) => {
+    if (e.ctrlKey) {
+        e.preventDefault();
+        zoomPage(e.deltaY > 0 ? 0.9 : 1.1);
+    }
 });

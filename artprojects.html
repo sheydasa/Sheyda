@@ -28,20 +28,11 @@
         </nav>
     </section>
     
-    <section class="hero-text">
-        <h1>Creative Projects</h1>
-        <br>
-    </section>
 
-    <section class="art-scroll">
-        
-        <div id="side-nav">
-            <a href="#paintings" class="active">Paintings</a>
-            <a href="#photography">Photography</a>
-            <a href="#">Logo Design</a>
-            <a href="#">Wall Art</a>
-            <a href="#mixedMedia">Mixed Media</a>
-        </div>
+        <section class="hero-text">
+            <h1> Creative Projects </h1>
+            <br>
+        </section>
 
         <div class="art-projects">
             <section class="paintings" id="paintings">
@@ -243,15 +234,6 @@
             </div>
         </div>
     </section>
-    
-        <!--Modal: Zoomed in image-->
-        <div id="myModal" class="modal" onclick="closeModal(event)">
-            <span class="close" onclick="closeModal(event)">&times;</span>
-            <div class="modal-content-wrapper">
-                <img class="modal-content" id="modal-img">
-                <div class="modal-details" id="modal-details"></div>
-            </div> 
-        </div>
         <br>
 
         <section class="mixedMedia" id="mixedMedia">
@@ -397,9 +379,37 @@
                             </div>
                         </div>
                     </a>
+            
+                <!--Modal: Zoomed in image-->
+                <div id="myModal" class="modal" onclick="closeModal(event)">
+                    <span class="close" onclick="closeModal(event)">&times;</span>
+                    <div class="modal-content-wrapper">
+                        <img class="modal-content" id="modal-img">
+                        <div class="modal-details" id="modal-details"></div>
+                    </div> 
+                </div>
             </div>
         </div>
     </section>
-    </section>
+
+    <br><br><br>
+</div>
+    <footer class="footer">
+        <div class="footer-container" id="getintouch">
+            <h2> GET IN TOUCH </h2>
+            <br>
+            <div class="social-icons">
+                <a href="mailto:sheydasaadat0@gmail.com" target="_blank">
+                    <img src="images/mail-icon.png" alt="Email" class="social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/sheydasa/" target="_blank">
+                    <img src="images/linkedin-icon.png" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://github.com/sheydasa" target="_blank">
+                    <img src="images/github-icon.png" alt="GitHub" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
