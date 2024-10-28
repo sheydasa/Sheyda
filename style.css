@@ -417,7 +417,7 @@ button:hover {
     width: 100%; 
     font-family: techText;
     line-height: 25px;
-    display: none;
+    display: none;  
 }
 
 /* Close button */
