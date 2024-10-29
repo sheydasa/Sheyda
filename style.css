@@ -559,7 +559,7 @@ button:hover {
 }
 
 /** PHONE VIEW */
-@media (max-width: 800px) {
+@media (max-width: 820px) {
     
     /** HOME PAGE */
     .header{
