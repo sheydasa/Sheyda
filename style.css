@@ -625,8 +625,12 @@ button:hover {
     }
 
     .column {
-        max-width: 100%; /* Make columns stack vertically */
+        max-width: 100%;
         padding-bottom: 20%;
+    }
+    
+    .tech-card{    
+        min-height: 25vh;
     }
     
     .tech-project-heading  h2{
