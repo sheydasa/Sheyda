@@ -626,11 +626,11 @@ button:hover {
 
     .column {
         max-width: 100%;
-        padding-bottom: 20%;
+        padding-bottom: 10%;
     }
     
     .tech-card{    
-        min-height: 25vh;
+        min-height: 30vh;
     }
     
     .tech-project-heading  h2{
@@ -648,6 +648,7 @@ button:hover {
     
     .tech-description{
         font-size: 0.7em;
+        padding-bottom: 10px;
     }
 
     .tech-bubble {
