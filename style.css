@@ -618,6 +618,7 @@ button:hover {
     .hero-text{
         padding-top: 5px;
         margin-top: 10px;
+        
     }
     
     .hero-text h1{
@@ -659,11 +660,24 @@ button:hover {
     .hero-text{
         padding-top: 5px;
         margin-top: 10px;
-        padding-left: 7%;
+        padding-left: 5%;
     }
     
     .hero-text h1{
         font-size: 2em;
     }
 
+    .art-projects{
+        padding-left: 5%;
+        padding-right: 5%;
+    }   
+
+    #project-cat{
+        font-size: 12px;
+    }
+
+    .row{
+        margin-bottom: 1%;
+        gap: 4%;
+    }
 }
