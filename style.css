@@ -388,7 +388,7 @@ button:hover {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
     z-index: 1000;
-    padding-top: 50px;
+    padding-top: 70px;
     padding-bottom: 50px;
 }
 
@@ -690,7 +690,7 @@ button:hover {
     }
     
     .tech-row{
-        gap: 3%;
+        gap: 4%;
     }
 
 }
