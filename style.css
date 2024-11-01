@@ -198,6 +198,14 @@ nav {
     justify-content: center;
     align-items: center;
 }
+
+.tech-column{
+    flex: 1;
+    max-width: 49%;
+    justify-content: center;
+    align-items: center;
+}
+
 .card::before {
     content: "";
     position: absolute;
@@ -490,6 +498,7 @@ button:hover {
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
     background-blend-mode: darken; 
+
 }
 
 .card-2{
@@ -631,8 +640,12 @@ button:hover {
     .hero-text h1{
         font-size: 2em;
     }
-
-    .column {
+    
+    .tech-row{
+        gap: 4%;
+    }
+    
+    .tech-column {
         max-width: 100%;
         padding-bottom: 2%;
     }
@@ -687,9 +700,10 @@ button:hover {
         margin-bottom: 1%;
         gap: 1.5%;
     }
-    
-    .tech-row{
-        gap: 4%;
+
+    .column {
+        max-width: 100%;
+        padding-bottom: 2%;
     }
 
 }
