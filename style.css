@@ -481,7 +481,7 @@ button:hover {
     background-color: pink;
     border-radius: 8px;
     padding: 20px;
-    min-height: 40vh;
+    min-height: 5vh;
 }
 
 .card-1{
