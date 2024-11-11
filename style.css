@@ -85,34 +85,6 @@ nav {
     box-shadow: 0px 0px 5px pink;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute; /* Absolute positioning */
-    top: 100%; /* Positioned just below the dropdown trigger */
-    left: 0;
-    background-color: black;
-    min-width: 150px;
-    z-index: 999; /* Ensure it's on top of other content */
-    box-shadow: 0px 0px 5px pink;
-    border-radius: 10px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 5px pink;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block; /* Show dropdown on hover */
-}
-
 @-webkit-keyframes slide-left{
     0% {
         -webkit-transform:translateX(150px);
@@ -170,21 +142,7 @@ nav {
     font-family: techText;
 }
 
-.project-card{
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 3%;
-}
-
 .row{
-    display:flex;
-    justify-content: space-between;
-    margin-bottom: 2%;
-    gap: 1%;
-    flex-wrap: wrap;
-}
-
-.tech-row{
     display:flex;
     justify-content: space-between;
     margin-bottom: 2%;
@@ -197,6 +155,26 @@ nav {
     max-width: 49%;
     justify-content: center;
     align-items: center;
+}
+
+.project-title{
+    color: white;
+    padding: 15px;
+    padding-left: 0;
+    text-decoration: none;
+}
+
+.project-title h3{
+    font-family: techText;
+    font-size: 20px;
+}
+
+.tech-row{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+    gap: 1%;
+    flex-wrap: wrap;
 }
 
 .tech-column{
@@ -258,12 +236,12 @@ nav {
 }
 
 .card:hover .project-info {
-    bottom: 0; /* Bring it into view */
-    opacity: 1; /* Fade it in */
+    bottom: 0; 
+    opacity: 1;
 }
 
 .project-desc{
-    padding-left: 20%;
+    padding-left: 10%;
     padding-right: 20%;
 }
 
@@ -329,6 +307,7 @@ button:hover {
 /* Art pages' hero*/
 .hero-text{
     padding-left: 10%;
+    padding-right: 30%;
     color: pink;
     position: relative;
     background-color: black;
@@ -349,6 +328,7 @@ button:hover {
 .hero-text p{
     font-size: 18px;
     text-align: left;
+    font-family: techText;
 }
 
 .art-card{
@@ -372,7 +352,6 @@ button:hover {
     transition: transform 0.3s ease;
 }
 
-
 .art-card:hover {
     opacity: 0.5;
 }
@@ -383,7 +362,6 @@ button:hover {
     text-align: left;
     color: black;
 }
-
 
 .modal {
     display: none; /* Hidden by default */
@@ -419,9 +397,7 @@ button:hover {
     margin: auto;
     display: block;
     width: 100%;
-
 }
-
 
 .modal-details {
     margin: 10px auto;
@@ -481,7 +457,7 @@ button:hover {
     padding-left: 10%;
     margin-top: 3%;
 }
-.tech-card{    
+.project-card{
     box-shadow: 0px 0px 5px pink;
     display: flex;
     flex-direction: column; 
@@ -498,7 +474,6 @@ button:hover {
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
     background-blend-mode: darken; 
-
 }
 
 .card-2{
@@ -520,7 +495,7 @@ button:hover {
 }
 
 .card-4{
-    background-image: url(images/loan.jpg);
+    background-image: url(ventureLAB.html/vl.png);
     background-size: cover;
     background-position: center 30%;
     background-repeat: no-repeat;
@@ -555,6 +530,18 @@ button:hover {
     top:0;
 }
 
+.external-logos{
+
+    filter: drop-shadow(0 0 10px rgba(241, 187, 201, 0.8)) 
+            drop-shadow(0 0 20px rgba(241, 187, 201, 0.6))
+            drop-shadow(0 0 30px rgba(241, 187, 201, 0.1));
+    transition: filter 0.3s ease-in-out;
+}
+
+.external-logos a img{
+    width: 30px;    
+}
+
 .github-logo {
     width: 45px;
     height: auto;
@@ -562,6 +549,16 @@ button:hover {
     border-radius: 30px;
 }
 
+.newWindow-logo{
+    width: 45px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.tech-stack{
+    display: flex;
+    justify-content: space-between;
+}
 
 .tech-bubble {
     display: inline-block;
@@ -574,9 +571,44 @@ button:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/**ventureLAB Projects Page*/
+.example-img{
+    width: 48vw;
+}
+
+.example-img img{
+    width:100%;
+    height:auto;
+}
+
+/** All Projects Page */
+.hero-text2{
+    color: pink;
+    background-color: black;
+    width: 100%;
+    z-index: 999;
+    padding-left: 10%;
+    margin-top: 100px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.hero-text2 h1{
+    font-size: 3em;
+    font-family: techFont;
+    margin-bottom: 0;
+    padding-bottom: 7px;
+    
+}
+
+.web-projects{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
 /** PHONE VIEW */
 @media (max-width: 820px) {
-    
+
     /** HOME PAGE */
     .header{
         padding-top: 5%;
@@ -589,19 +621,10 @@ button:hover {
     .nav-links ul li a{
         font-size: 0.8rem;
     }
-
-    .dropdown-content{
-        min-width: 120px;
-    }
-    .dropdown-content a{ 
-        font-size: 90px;
-    }
     
     .main-hero-text{
         padding-right: 10%;
         padding-left: 10%;
-        padding-top: 50px;
-        margin-top: 30px;
     }
     
     .main-hero-text h1{
@@ -634,7 +657,6 @@ button:hover {
     .hero-text{
         padding-top: 5px;
         margin-top: 10px;
-        
     }
     
     .hero-text h1{
@@ -650,8 +672,12 @@ button:hover {
         padding-bottom: 2%;
     }
     
-    .tech-card{    
-        min-height: 25vh;
+    .project-card{    
+        min-height: 50vh;
+    }
+
+    .card-3{
+        min-height: 40vh;
     }
     
     .tech-project-heading  h2{
@@ -706,4 +732,11 @@ button:hover {
         padding-bottom: 2%;
     }
 
+    .small-nav-bar{
+        position: static;
+        flex-direction: row;
+        justify-content: left;
+        padding-left: 10%;
+        transform: none;
+    }
 }

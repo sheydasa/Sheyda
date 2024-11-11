@@ -6,9 +6,7 @@ function openModal(element) {
     document.getElementById('modal-img').src = imgSrc; // Set it to the modal image
 
     document.getElementById('modal-details').innerHTML = projectInfo;
-
 }
-
 function closeModal(event) {
     var modal = document.getElementById('myModal');
     var modalImg = document.getElementById('modal-img');
