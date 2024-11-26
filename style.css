@@ -503,6 +503,15 @@ button:hover {
     background-blend-mode: darken; 
 }
 
+.card-5{
+    background-image: url(images/Group\ 8.png);
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    background-blend-mode: darken; 
+}
+
 .tech-project-heading{
     display: flex;
     justify-content: space-between;
