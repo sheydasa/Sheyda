@@ -498,7 +498,7 @@ button:hover {
 }
 
 .card-1{
-    background-image: url(images/heart-model.jpg);
+    background-image: url(images/thumbnails/heart-model.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
@@ -506,7 +506,7 @@ button:hover {
 }
 
 .card-2{
-    background-image: url(images/loan.jpg);
+    background-image: url(images/thumbnails/loan.jpg);
     background-size: cover;
     background-position: center 30%;
     background-repeat: no-repeat;
@@ -515,7 +515,7 @@ button:hover {
 }
 
 .card-3{
-    background-image: url(images/xml.jpg);
+    background-image: url(images/thumbnails/xml.jpg);
     background-size: cover;
     background-position: center 30%;
     background-repeat: no-repeat;
@@ -524,7 +524,7 @@ button:hover {
 }
 
 .card-4{
-    background-image: url(ventureLAB.html/vl.png);
+    background-image: url(images/thumbnails/vl.png);
     background-size: cover;
     background-position: center 30%;
     background-repeat: no-repeat;
@@ -533,7 +533,7 @@ button:hover {
 }
 
 .card-5{
-    background-image: url(images/Royal.png);
+    background-image: url(images/thumbnails/Royal.png);
     background-size: cover;
     background-position: center 30%;
     background-repeat: no-repeat;
@@ -642,6 +642,32 @@ button:hover {
 .web-projects{
     padding-left: 10%;
     padding-right: 10%;
+}
+
+/** FULL PROJECT PAGES*/
+.full-project {
+    padding-right: 20%;
+    padding-left: 20%;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+  }
+
+.full-project-title{
+    color: pink;
+    font-family: techFont;
+    text-align: center;
+    margin-top: 25vh;
+}
+
+.full-project-title h2{
+    font-size: 35px;
+}
+
+.full-project-info{
+    color: pink;
+    font-family: techText;
+    margin-top: 5vh;
+    text-align: center;
 }
 
 /** PHONE VIEW */
