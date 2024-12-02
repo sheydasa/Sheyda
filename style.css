@@ -670,6 +670,75 @@ button:hover {
     text-align: center;
 }
 
+.full-project-profiles{
+    
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 60px;
+    
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+    text-align: center;
+}
+
+.slide h2{
+    color: pink;
+    font-family: techFont;
+    font-size: 20px;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: pink(0, 0, 0, 0.5);
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    top: 40px;
+}
+
+.prev {
+    left: 0px;
+}
+
+.next {
+    right: 0px;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+    display: inline-block;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #555;
+}
+
+
 /** PHONE VIEW */
 @media (max-width: 820px) {
 

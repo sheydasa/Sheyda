@@ -82,3 +82,31 @@ document.addEventListener("wheel", (e) => {
         zoomPage(e.deltaY > 0 ? 0.9 : 1.1);
     }
 });
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Change slide
+function changeSlide(n) {
+    showSlides(slideIndex += n);
+}
+
+// Show specific slide
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+// Display slides
+function showSlides(n) {
+    let slides = document.querySelectorAll('.slide');
+    let dots = document.querySelectorAll('.dot');
+
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+
+    slides.forEach(slide => slide.style.display = 'none');
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    slides[slideIndex - 1].style.display = 'block';
+    dots[slideIndex - 1].classList.add('active');
+}
