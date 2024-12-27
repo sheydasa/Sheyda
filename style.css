@@ -670,17 +670,12 @@ button:hover {
     text-align: center;
 }
 
-.full-project-profiles{
-    
-}
-
 .slideshow-container {
     position: relative;
     max-width: 100%;
     margin: auto;
     overflow: hidden;
-    padding: 0 60px;
-    
+    padding: 0 60px; 
 }
 
 .slide {
