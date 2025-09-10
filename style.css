@@ -244,6 +244,7 @@ nav {
     box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
+
 .project-info{
     position: absolute;
     bottom: -100px; /* Initially hide it off-screen */
@@ -298,6 +299,42 @@ button:hover {
     padding-right: 30px;
     padding-left: 30px;
 }
+
+
+.project-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-buttons a{
+    text-decoration: none;
+}
+
+.behance{
+    background-color: pink;
+    padding: 10px;
+    color: black;
+    border-radius: 8px;
+}
+
+.original-site{
+    background-color: pink;
+    padding: 10px;
+    color: black;
+    border-radius: 8px;
+}
+
+.behance h2{
+    font-family: Menlo;
+    font-size: 1.1vw;
+}
+
+.original-site h2{
+    font-family: Menlo;
+    font-size: 1.1vw;
+}
+
 
 
 /* FOOTER */
@@ -381,8 +418,31 @@ button:hover {
     transition: transform 0.3s ease;
 }
 
-.art-card:hover {
+.art-card:hover .art-card-overlay{
     opacity: 0.5;
+}
+
+.art-card-overlay{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: blue;
+}
+
+.magnify-icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .project-details{
@@ -401,7 +461,7 @@ button:hover {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+    background-color: rgba(0, 0, 0, 0.2); /* Black background with opacity */
     z-index: 1000;
     padding-top: 70px;
     padding-bottom: 50px;
@@ -498,19 +558,19 @@ button:hover {
 }
 
 .card-1{
-    background-image: url(images/thumbnails/heart-model.jpg);
+    background-image: url(images/1.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
     background-blend-mode: darken; 
 }
 
 .card-2{
-    background-image: url(images/thumbnails/loan.jpg);
+    background-image: url(images/2.png);
     background-size: cover;
     background-position: center 30%;
     background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
     background-blend-mode: darken; 
 }
 
@@ -528,7 +588,7 @@ button:hover {
     background-size: cover;
     background-position: center 30%;
     background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
     background-blend-mode: darken; 
 }
 
@@ -537,7 +597,7 @@ button:hover {
     background-size: cover;
     background-position: center 30%;
     background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
     background-blend-mode: darken; 
 }
 
@@ -547,7 +607,7 @@ button:hover {
     align-items: center;
     margin-bottom: 10px;
     color: pink;
-    font-family: techFont;
+    font-family: Menlo;
     line-height: 2em;
 }
 
@@ -561,7 +621,7 @@ button:hover {
     color:pink;
     flex-grow: 1;
     font-family: techText;
-    line-height: 2em;
+    line-height: 1.3em;
 }
 
 .github-logo-container{
@@ -637,7 +697,7 @@ button:hover {
 }
 
 .hero-text2 h1{
-    font-size: 3em;
+    font-size: 2em;
     font-family: techFont;
     margin-bottom: 0;
     padding-bottom: 7px;
@@ -834,7 +894,6 @@ button:hover {
     .tech-bubble {
         font-size: 0.8rem;
     }
-
     /** ART PROJECTS PAGE */
     .hero-text{
         padding-top: 5px;
