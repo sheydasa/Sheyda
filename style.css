@@ -313,26 +313,26 @@ button:hover {
 
 .behance{
     background-color: pink;
-    padding: 10px;
+    padding: 5px;
     color: black;
     border-radius: 8px;
 }
 
 .original-site{
     background-color: pink;
-    padding: 10px;
+    padding: 5px;
     color: black;
     border-radius: 8px;
 }
 
 .behance h2{
     font-family: Menlo;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
 }
 
 .original-site h2{
     font-family: Menlo;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
 }
 
 
