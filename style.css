@@ -873,6 +873,31 @@ button:hover {
         min-height: 40vh;
     }
     
+
+    .behance{
+        background-color: pink;
+        padding: 5px;
+        color: black;
+        border-radius: 8px;
+    }
+
+    .original-site{
+        background-color: pink;
+        padding: 5px;
+        color: black;
+        border-radius: 8px;
+    }
+
+    .behance h2{
+        font-family: Menlo;
+        font-size: 1.2vw;
+    }
+
+    .original-site h2{
+        font-family: Menlo;
+        font-size: 1.2vw;
+    }   
+
     .tech-project-heading  h2{
         font-size: 1em;
         line-height: 1.4em;
