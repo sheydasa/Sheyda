@@ -558,7 +558,7 @@ button:hover {
 }
 
 .card-1{
-    background-image: url(images/1.png);
+    background-image: url(images/thumbnails/1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
@@ -566,7 +566,7 @@ button:hover {
 }
 
 .card-2{
-    background-image: url(images/2.png);
+    background-image: url(images/thumbnails/2.png);
     background-size: cover;
     background-position: center 30%;
     background-repeat: no-repeat;
