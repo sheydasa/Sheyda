@@ -773,6 +773,7 @@ button:hover {
     .tech-column {
         max-width: 100%;
         padding-bottom: 2%;
+        height: 30vh;
     }
     
     .project-card{    
