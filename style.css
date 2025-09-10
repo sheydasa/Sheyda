@@ -767,7 +767,7 @@ button:hover {
     }
     
     .tech-row{
-        gap: 4%;
+        display: block;
     }
     
     .tech-column {
