@@ -559,7 +559,7 @@ button:hover {
 
 .card-1{
     background-image: url(images/thumbnails/1.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
     background-blend-mode: darken; 
@@ -567,7 +567,7 @@ button:hover {
 
 .card-2{
     background-image: url(images/thumbnails/2.png);
-    background-size: contain;
+    background-size: cover;
     background-position: center 30%;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
@@ -783,6 +783,13 @@ button:hover {
         min-height: 40vh;
     }
     
+    .card-1{
+        background-size: contain;
+    }
+
+    .card-2{
+        background-size: contain;
+    }
 
     .behance{
         background-color: pink;
